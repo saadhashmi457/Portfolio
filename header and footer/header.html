@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Website</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+
+        .logo{
+            float:left;
+            padding-top:12px;
+            padding-left:72px;
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        .logo a{
+            color: #fff;
+            cursor:pointer;
+            text-decoration:none;
+            
+        }
+
+    </style>
+ 
+</head>
+<body>
+    <nav class="navbar">
+
+        <div class="logo"><a href="">My Portfolio.</a></div>
+            
+        <ul>
+    
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#about" onclick="showSection('about')">About</a></li>
+            <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            <li><a href="#Services" onclick="showSection('Services')">Services</a></li>
+            <li><a href="#Projects" onclick="showSection('Projects')">Projects</a></li>
+            <li><a href="#mydetails" onclick="showSection('mydetails')">My Details</a></li>
+        </ul>
+    </nav>
+</body>
+<script src="/static/js/script.js"></script>
+</html>

@@ -1,0 +1,258 @@
+
+
+
+
+
+{% include "header and footer/header.html" %}
+
+
+<style>
+  {% comment %} #home{ 
+            background: #161a21ff;
+    } {% endcomment %}
+
+    #home h1{
+         color: #e4dd07e9;
+         font-size: 52px;
+    }
+
+
+    {% comment %} #about{
+        background: #161a21ff;
+
+    } {% endcomment %}
+
+
+ body{
+    background: #161a21ff;
+
+ }
+
+
+
+</style>
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <img src="static/images/home.png" alt="pic">
+        <h1>Welcome to <span>My Portfolio</span> Website</h1>
+        <p>This website provides simple and effective <b>Portfolio</b><br> for my official introduction.</p>
+        
+    </section>
+
+
+        <!--About Section -->
+    <section id="about" class="section">
+        <h1>About Us</h1>
+        <p>  Welcome to our <b>Portfolio Web App!</b> <br> This application is designed to provide a simple, fast, and accurate way to <b>introduce me</b> with an user-friendly interface</b> and a <b>modern design</b>.<br> My goal is to create a <b>seamless user experience</b> with a responsive design that works across all devices.<br> <br><b> Thank you for your interest in me!</b>  <br><br>  <button><a href="#mydetails" onclick="showSection('mydetails')">See all about Me</a></button> </p>
+        
+    </section>
+
+      
+
+     <section id="Projects" class="section">
+      <div class="pdt">
+          <h1>My Projects</h1>
+        <p>Welcome to My <b>Projects section!</b> This Section is designed to provide all those projects that i have made with python django.. </p>
+      </div>
+
+      <div class="pp">
+
+         <div class="pc1">
+            <h3>1.Portfolio Websites</h3>
+            <h5>My personal portfolio website where all details are mentioned about me.</h5>
+            <button><a href="static/images/p2.jpg">See Project</a></button>
+        </div>
+         <div class="pc1">
+            <h3>2.Book Exchange System<h3>
+            <h5>Book exchange system is a webapp their official name is <b>EduShelf</b>. You can exchange,sell or donate books in edushelf webapp. </h5>
+            <button><a href="static/images/p1.jpg">See Project</a></button>
+        </div>
+         <div class="pc1">
+            <h3>3.Gym Management System</h3>
+            <h5>A complete gym webapp whre you can access all details about gym and get your reservations online.</h5>
+            <button><a href="static/images/p3.jpg">See Project</a></button>
+        </div>
+         <div class="pc1">
+            <h3>4.Trip Mangement System</h3>
+            <h5>A mini webapp used to manage all the trip procedures from booking to complete trip.</h5>
+            <button><a href="static/images/p4.jpg">See Project</a></button>
+        </div>
+         <div class="pc1">
+            <h3>5.Car Driving School</h3>
+            <h5>An app where you can get car driving services remotely.</h5>
+            <button><a href="static/images/p5.jpg">See Project</a></button>
+        </div>
+        <div class="pc1">
+            <h3>6.Hospital Management System</h3>
+            <h5>A complete management system for hospital from appointment booking to end procedures.</h5>
+            <button><a href="static/images/p6.jpg">See Project</a></button>
+        </div>
+           <div class="pc1">
+            <h3>7.Calculator Web App</h3>
+            <h5>An eyecapture calculator webapp with full calculator functionalities together with modern interfaces.</h5>
+            <button><a href="static/images/p7.jpg">See Project</a></button>
+        </div>
+           <div class="pc1">
+            <h3>8.Quiz game</h3>
+            <h5>Quiz game is a intellectual game where you have some questions and you can give your response and get score. </h5>
+            <button><a href="static/images/p8.jpg">See Project</a></button>
+        </div>
+
+
+      </div>
+    </section>
+
+  <!-- Contact Section -->
+     <section id="contact" class="section">
+       <div class="Contactd">
+         <h1> Contact Us</h1>
+         <p>  Welcome to our <b>Calculator Web App!</b> <br> Feel free to <span>Contact Us</span> to Create a calculator app <br> according to your taste and to get help <br> from us  to get our coding services. <br>  All these services you can check here. <br> <button href="#Services" onclick="showSection('Services')">Services</button>  </p>
+       </div>
+
+          <div class="Contactf">
+            <h2>Contact Us</h2>
+           
+            <form id="contact-form" method="POST" action="{% url "homepage" %}">
+             {% csrf_token %}
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                
+                <button type="submit">Send</button>
+
+
+            </form>
+        </div>
+    </section>
+
+      <section id="mydetails" class="section">
+      <div class="dtdata">  <h1>Profile</h1>
+        <p> I am <b>SAAD Anwaar</b> a graduated Software Engineer. a dedicated and a fresh <b>engineer</b>, ready to lead my company with a great energy and fresh motivation. look at my qualifications, experiences and skills just by clicking on below titles. </p> </div>
+
+        <div class="container">
+    <h1>About Me</h1>
+    <div class="sectiona">
+        <div class="sectiona-title" onclick="toggleSection('education')">Education</div>
+        <div class="sectiona-content" id="education">
+            <span>School</span>
+            <ul>
+                <li><strong>Degree:</strong> Matric in Medical Science </li>
+                <li><strong>School:</strong> Ideal Public School AJ&K</li>
+                <li><strong>Graduation Year:</strong> 2019</li>
+            </ul>
+            <hr>
+
+            <span>College</span>
+             <ul>
+                <li><strong>Degree:</strong> Intermediate in Computer Science</li>
+                <li><strong>College:</strong> Ideal Public College AJ&K</li>
+                <li><strong>Graduation Year:</strong> 2021</li>
+            </ul>
+             <hr>
+
+             <span>University</span>
+             <ul>
+                <li><strong>Degree:</strong> BS in Software Engineering</li>
+                <li><strong>University:</strong> University of kotli AJ&K</li>
+                <li><strong>Graduation Year:</strong> 2025</li>
+            </ul>
+             <hr>
+        </div>
+    </div>
+
+    <div class="sectiona">
+        <div class="sectiona-title" onclick="toggleSection('experience')">Experience</div>
+        <div class="sectiona-content" id="experience">
+             <span>1st</span>
+            <ul>
+                <li><strong>Job Title:</strong> Software Engineer Intern</li>
+                <li><strong>Company:</strong> Logicexer</li>
+                <li><strong>Duration:</strong> June 2024 - August 2025</li>
+            </ul>
+            <hr>
+             <span>2nd</span>
+              <ul>
+                <li><strong>Job Title:</strong> Full Stack Developer</li>
+                <li><strong>Company:</strong> Stars House</li>
+                <li><strong>Duration:</strong> December 2025 - Continue</li>
+            </ul>
+            <hr>
+
+        </div>
+    </div>
+
+    <div class="sectiona">
+        <div class="sectiona-title" onclick="toggleSection('hobbies')">Hobbies</div>
+        <div class="sectiona-content" id="hobbies">
+            <span>Core Skills</span>
+            <ul>
+                <li>Web designing</li>
+                <li>Web development</li>
+                <li>App Development</li>
+                <li>UI and UX Design and Diagrams</li>
+            </ul>
+            <hr>
+            <span>Basic Skills</span>
+            <ul>
+                <li>Painting</li>
+                <li>Reading</li>
+                <li>Gyming</li>
+                <li>Footbaal and Cricket player</li>
+            </ul>
+            <hr>
+
+        </div>
+    </div>
+</div>
+
+    </section>
+
+
+
+    <section id="Services" class="section">
+       <div class="sd"> <h1>My Services</h1>
+        <p>  These are my Skills as a<b> Software Engineer</b>. This Section is all about the services i have and you can get these by just know me you want. Feel free to contact me for getting my services. <br><br> <button><b> <a href="#contact" onclick="showSection('contact')">Contact</a> </b></button> </p> 
+     </div>
+        <div class="scontainers">
+
+
+            {% for i in servicedata %}
+            <div class="firstc">
+                <h2>{{i.Service_title}}</h2>
+                <p>{{i.Service_detail}}</p>
+                {% comment %} <button>Show More</button> {% endcomment %}
+            </div>
+
+            {% endfor %}
+
+            {% comment %} <div class="secondc">
+                <h2>Web Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos voluptates dolore ea necessitatibus vitae asperiores, error quam, optio, porro magnam exercitationem. Libero, provident. Ea placeat veritatis soluta tenetur laborum enim voluptatum iure commodi, natus culpa! Voluptates fuga nam fugiat voluptas sunt voluptatibus dignissimos libero eos?</p>
+                <button>Show More</button>
+            </div>
+
+            <div class="thirdc">
+                <h2>App Development</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit blanditiis, eveniet reiciendis laboriosam dignissimos quae adipisci nesciunt ad repellat voluptatibus nemo iste vitae magni possimus eos ratione similique deserunt voluptate culpa accusamus minima praesentium. Autem maiores corporis aperiam officiis sequi magni sapiente tempore omnis nemo?</p>
+                <button>Show More</button>
+            </div> {% endcomment %}
+
+        </div>
+    </section>
+
+    <br>  <br>   <br>  <br>  
+     <br>  <br>   <br>  <br>  <br>   <br>  <br>  <br>   <br> <br>   <br>  <br>  <br>   <br>  <br>  <br>   <br> <br>   <br>  <br>  <br>   <br>  <br>  <br>   <br> <br>   
+
+    <!-- Calculator Section -->
+
+    {% include "header and footer/footer.html" %}
+
+
+
+
